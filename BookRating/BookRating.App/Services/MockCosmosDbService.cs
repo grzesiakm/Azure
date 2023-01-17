@@ -8,7 +8,7 @@ public class MockCosmosDbService : ICosmosDbService
     {
         Id = "id",
         Description = "abcd",
-        Completed = false,
+        Rating = 4,
         Name = "film o pszczołach"
     };
     public Task<IEnumerable<BookRatingViewModel>> GetItemsAsync(string query)

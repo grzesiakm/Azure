@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cojbbOgFcqeOPW3kvsvJ9nNJq2mFk/q8I+NN8J4GKeuDlUk0auK6SWUs9eA7Dt8JY7qBJWJ6uNGMLd1zGJ5gVA==",
+  "dgSpecHash": "F1KcJ6V+talvYJoGj8Hel4rZ4PSktvyeYg3988jS4IKNW3EWGbLWsAKgTJJTN2Tn58pQ+wzZFthWvP8fN5Gh5w==",
   "success": true,
-  "projectFilePath": "/Users/marta.grzesiak@schibsted.com/Documents/RiderProjects/BookRating/BookRating.App/BookRating.App.csproj",
+  "projectFilePath": "/Users/marta.grzesiak@schibsted.com/Documents/RiderProjects/Azure/BookRating/BookRating.App/BookRating.App.csproj",
   "expectedPackageFiles": [
     "/Users/marta.grzesiak@schibsted.com/.nuget/packages/azure.core/1.19.0/azure.core.1.19.0.nupkg.sha512",
     "/Users/marta.grzesiak@schibsted.com/.nuget/packages/microsoft.azure.cosmos/3.31.2/microsoft.azure.cosmos.3.31.2.nupkg.sha512",

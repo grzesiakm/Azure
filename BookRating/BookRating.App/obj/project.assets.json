@@ -1081,11 +1081,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/marta.grzesiak@schibsted.com/Documents/RiderProjects/BookRating/BookRating.App/BookRating.App.csproj",
+      "projectUniqueName": "/Users/marta.grzesiak@schibsted.com/Documents/RiderProjects/Azure/BookRating/BookRating.App/BookRating.App.csproj",
       "projectName": "BookRating.App",
-      "projectPath": "/Users/marta.grzesiak@schibsted.com/Documents/RiderProjects/BookRating/BookRating.App/BookRating.App.csproj",
+      "projectPath": "/Users/marta.grzesiak@schibsted.com/Documents/RiderProjects/Azure/BookRating/BookRating.App/BookRating.App.csproj",
       "packagesPath": "/Users/marta.grzesiak@schibsted.com/.nuget/packages/",
-      "outputPath": "/Users/marta.grzesiak@schibsted.com/Documents/RiderProjects/BookRating/BookRating.App/obj/",
+      "outputPath": "/Users/marta.grzesiak@schibsted.com/Documents/RiderProjects/Azure/BookRating/BookRating.App/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/marta.grzesiak@schibsted.com/.nuget/NuGet/NuGet.Config"

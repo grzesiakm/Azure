@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<BookRatingViewModel>
 
 @{
-    ViewBag.Title = "List of To-Do Items";
+    ViewBag.Title = "Book Ratings";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>List of To-Do Items</h2>
+<h2>Book Ratings</h2>
 
 <table class="table">
     <tr>
@@ -16,7 +16,7 @@
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Completed)
+            @Html.DisplayNameFor(model => model.Rating)
         </th>
         <th></th>
     </tr>
@@ -31,7 +31,7 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Completed)
+                @Html.DisplayFor(modelItem => item.Rating)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |

@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create a new To-Do Item</h2>
+<h2>Add new Rating</h2>
 
 
 @using (Html.BeginForm())
@@ -32,11 +32,11 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Completed, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Rating, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.Completed)
-                    @Html.ValidationMessageFor(model => model.Completed, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.Rating)
+                    @Html.ValidationMessageFor(model => model.Rating, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>

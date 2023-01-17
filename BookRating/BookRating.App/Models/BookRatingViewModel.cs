@@ -14,8 +14,8 @@ namespace BookRating.App.Models
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
 
-        [JsonProperty(PropertyName = "isComplete")]
-        public bool Completed { get; set; }
+        [JsonProperty(PropertyName = "rating")]
+        public int Rating { get; set; }
     }
 }
 

@@ -28,7 +28,7 @@ public class BookRatingController : Controller
         [HttpPost]
         [ActionName("Create")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> CreateAsync([Bind("Id,Name,Description,Completed")] BookRatingViewModel item)
+        public async Task<ActionResult> CreateAsync([Bind("Id,Name,Description,Rating")] BookRatingViewModel item)
         {
             if (ModelState.IsValid)
             {
@@ -43,7 +43,7 @@ public class BookRatingController : Controller
         [HttpPost]
         [ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> EditAsync([Bind("Id,Name,Description,Completed")] BookRatingViewModel item)
+        public async Task<ActionResult> EditAsync([Bind("Id,Name,Description,Rating")] BookRatingViewModel item)
         {
             if (ModelState.IsValid)
             {
