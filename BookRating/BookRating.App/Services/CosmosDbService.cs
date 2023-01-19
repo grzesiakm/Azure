@@ -7,36 +7,34 @@ using System.Linq;
 using System.Threading.Tasks;
     
 using Microsoft.Azure.Cosmos;
-using Microsoft.Azure.Cosmos.Fluent;
-using Microsoft.Extensions.Configuration;
 
 public class CosmosDbService : ICosmosDbService
 {
-    private Container _container;
+    private readonly Container _container;
 
     public CosmosDbService(
         CosmosClient dbClient,
         string databaseName,
         string containerName)
     {
-        this._container = dbClient.GetContainer(databaseName, containerName);
+        _container = dbClient.GetContainer(databaseName, containerName);
     }
         
     public async Task AddItemAsync(BookRatingViewModel item)
     {
-        await this._container.CreateItemAsync<BookRatingViewModel>(item, new PartitionKey(item.Id));
+        await _container.CreateItemAsync(item, new PartitionKey(item.Id));
     }
 
     public async Task DeleteItemAsync(string id)
     {
-        await this._container.DeleteItemAsync<BookRatingViewModel>(id, new PartitionKey(id));
+        await _container.DeleteItemAsync<BookRatingViewModel>(id, new PartitionKey(id));
     }
 
     public async Task<BookRatingViewModel> GetItemAsync(string id)
     {
         try
         {
-            ItemResponse<BookRatingViewModel> response = await this._container.ReadItemAsync<BookRatingViewModel>(id, new PartitionKey(id));
+            ItemResponse<BookRatingViewModel> response = await _container.ReadItemAsync<BookRatingViewModel>(id, new PartitionKey(id));
             return response.Resource;
         }
         catch(CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
@@ -48,7 +46,7 @@ public class CosmosDbService : ICosmosDbService
 
     public async Task<IEnumerable<BookRatingViewModel>> GetItemsAsync(string queryString)
     {
-        var query = this._container.GetItemQueryIterator<BookRatingViewModel>(new QueryDefinition(queryString));
+        var query = _container.GetItemQueryIterator<BookRatingViewModel>(new QueryDefinition(queryString));
         List<BookRatingViewModel> results = new List<BookRatingViewModel>();
         while (query.HasMoreResults)
         {
@@ -62,6 +60,6 @@ public class CosmosDbService : ICosmosDbService
 
     public async Task UpdateItemAsync(string id, BookRatingViewModel item)
     {
-        await this._container.UpsertItemAsync<BookRatingViewModel>(item, new PartitionKey(id));
+        await _container.UpsertItemAsync(item, new PartitionKey(id));
     }
 }
