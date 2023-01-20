@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'BookRatingApp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CFD9782BD33B46058E4071A2C8140D27 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A9C59C28DE6D44F7813C9EE293D949D6 }}
           package: .
