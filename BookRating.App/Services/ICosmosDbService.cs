@@ -1,12 +1,12 @@
-using BookRating.App.Models;
+using BookRating.App.Models.Entities;
 
 namespace BookRating.App.Services;
 
 public interface ICosmosDbService
 {
-    Task<IEnumerable<BookRatingViewModel>> GetItemsAsync(string query);
-    Task<BookRatingViewModel> GetItemAsync(string id);
-    Task AddItemAsync(BookRatingViewModel item);
-    Task UpdateItemAsync(string id, BookRatingViewModel item);
+    Task<IEnumerable<BookRatingEntity>> GetItemsAsync(string query);
+    Task<BookRatingEntity> GetItemAsync(string id);
+    Task AddItemAsync(BookRatingEntity entity);
+    Task UpdateItemAsync(BookRatingEntity entity);
     Task DeleteItemAsync(string id);
 }
