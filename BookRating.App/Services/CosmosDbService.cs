@@ -1,4 +1,3 @@
-using BookRating.App.Models;
 using BookRating.App.Models.Entities;
 
 namespace BookRating.App.Services;
@@ -27,7 +26,7 @@ public class CosmosDbService : ICosmosDbService
 
     public async Task DeleteItemAsync(string id)
     {
-        await _container.DeleteItemAsync<BookRatingViewModel>(id, new PartitionKey(id));
+        await _container.DeleteItemAsync<BookRatingEntity>(id, new PartitionKey(id));
     }
 
     public async Task<BookRatingEntity> GetItemAsync(string id)
